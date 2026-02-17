@@ -1,0 +1,386 @@
+/*===========================================*/
+/*	ARROWTIP THEME: #000000 (dark) + #fad56b (accent)
+/*===========================================*/
+
+:root {
+	--arrowtip-dark: #000000;
+	--arrowtip-accent: #fad56b;
+	--arrowtip-font: 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark background, white text globally */
+body {
+	background: #000000;
+	color: #fff;
+	font-family: var(--arrowtip-font);
+}
+body, #page, .main-head, .menu, .title, .hero-title, .hero-subtitle, .container, .btn {
+	font-family: var(--arrowtip-font);
+}
+#page {
+	visibility: visible;
+	opacity: 1;
+}
+body > .page-loader {
+	animation: arrowtip-hide-loader 0.5s ease 2s forwards;
+	background: #000000;
+}
+@keyframes arrowtip-hide-loader {
+	to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+/* Primary/accent = gold */
+.txt-primary,
+.typo-light .txt-primary,
+.arrowtip-card-icon,
+.iconwrp.txt-primary,
+#services .arrowtip-card-icon i,
+#mission .sq60.txt-primary,
+#principles .iconwrp.txt-primary {
+	color: #fad56b !important;
+}
+.btn-primary,
+.solid.btn-primary,
+.solid.btn-primary:hover,
+.solid.btn-primary:focus,
+.solid.btn-primary.active {
+	background: #fad56b !important;
+	border-color: #fad56b !important;
+	color: #000000 !important;
+}
+.btn-primary:hover,
+.solid.btn-primary:hover {
+	background: #fce088 !important;
+	border-color: #fce088 !important;
+	color: #000000 !important;
+}
+.arrowtip-cta.btn-white {
+	background: #fad56b !important;
+	border-color: #fad56b !important;
+	color: #000000 !important;
+}
+.arrowtip-cta.btn-white:hover {
+	background: #fce088 !important;
+	border-color: #fce088 !important;
+	color: #000000 !important;
+}
+
+/* Header: dark bg, white links */
+.main-head.dark,
+.main-head {
+	background: #000000 !important;
+}
+.main-head .menu-item > a,
+.main-head a,
+.header-logo {
+	color: #fff !important;
+}
+.main-head .menu-item > a:hover {
+	color: #fad56b !important;
+}
+.main-head .arrowtip-logo-img {
+	display: block;
+	height: auto;
+	max-height: 72px;
+	width: auto;
+}
+.main-head .arrowtip-logo-img:hover {
+	filter: drop-shadow(0 0 10px rgba(250, 213, 107, 0.4));
+}
+.main-head.header-sticky .arrowtip-logo-img {
+	max-height: 58px;
+}
+
+/* Footer logo */
+.footer-logo-wrp {
+	display: inline-block;
+	margin-bottom: 1rem;
+}
+.footer-logo-img {
+	display: block;
+	height: auto;
+	max-height: 56px;
+	width: auto;
+}
+.footer-logo-wrp:hover .footer-logo-img {
+	filter: drop-shadow(0 0 8px rgba(250, 213, 107, 0.35));
+}
+
+/* Hero carousel – dark overlay, accent bullets */
+.hero-carousel-section {
+	min-height: 100vh;
+}
+.hero-carousel-section .swiper-container {
+	min-height: 100vh;
+	opacity: 1;
+}
+.hero-carousel-section .swiper-slide {
+	background-size: cover;
+	background-position: center;
+	background-color: #000000;
+	min-height: 100vh;
+	/* Fallback gradients when bg images are missing; data-slide-bg can override via JS when images exist */
+	background-image: linear-gradient(135deg, #1d2440 0%, #0a0a12 50%, #000000 100%);
+}
+.hero-carousel-section .swiper-slide:nth-child(4n+2) {
+	background-image: linear-gradient(160deg, #0c0c0c 0%, #1d2440 40%, #000000 100%);
+}
+.hero-carousel-section .swiper-slide:nth-child(4n+3) {
+	background-image: linear-gradient(200deg, #000000 0%, #1a1a2e 60%, #0a0a12 100%);
+}
+.hero-carousel-section .swiper-slide:nth-child(4n+4) {
+	background-image: linear-gradient(120deg, #1d2440 0%, #000000 100%);
+}
+.hero-overlay {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+.hero-caption {
+	position: relative;
+	z-index: 10;
+	max-width: 90%;
+}
+.hero-title {
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	line-height: 1.15;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	color: #fff;
+}
+.hero-subtitle {
+	opacity: 0.95;
+	color: #fff;
+}
+.hero-pagination .swiper-pagination-bullet {
+	background: rgba(255,255,255,0.4);
+	opacity: 1;
+}
+.hero-pagination .swiper-pagination-bullet-active {
+	background: #fad56b;
+	transform: scale(1.2);
+}
+.hero-carousel-section .swiper-button-prev,
+.hero-carousel-section .swiper-button-next {
+	width: 48px;
+	height: 48px;
+	background: rgba(250, 213, 107, 0.2);
+	border-radius: 50%;
+	transition: background 0.2s;
+	color: #fff;
+	z-index: 20;
+	cursor: pointer;
+}
+.hero-carousel-section .hero-pagination {
+	z-index: 20;
+}
+.hero-carousel-section .swiper-button-prev:hover,
+.hero-carousel-section .swiper-button-next:hover {
+	background: rgba(250, 213, 107, 0.4);
+}
+.hero-carousel-section .swiper-button-prev:after,
+.hero-carousel-section .swiper-button-next:after {
+	content: none;
+}
+.hero-carousel-section .swiper-button-prev i,
+.hero-carousel-section .swiper-button-next i {
+	font-size: 24px;
+}
+
+/* Sections: alternating slightly darker/lighter background */
+#services {
+	background: #000000 !important;
+	color: #fff !important;
+}
+#about {
+	background: #0c0c0c !important;
+	color: #fff !important;
+}
+#mission {
+	background: #000000 !important;
+	color: #fff !important;
+}
+#principles {
+	background: #0c0c0c !important;
+	color: #fff !important;
+}
+#positioning {
+	background: #000000 !important;
+	color: #fff !important;
+}
+section.bg-gray,
+section.pos-rel.pd-tb-small {
+	color: #fff !important;
+}
+#about .bg-glass-light-08,
+#about .pd-small {
+	background: rgba(0, 0, 0, 0.85) !important;
+	color: #fff !important;
+	border: 1px solid rgba(250, 213, 107, 0.2);
+}
+#about .title-sub,
+#about p,
+#services .title-sub,
+#services p,
+#services .title,
+#services h3,
+#mission .title,
+#mission .title-sub,
+#mission p,
+#mission h3,
+#principles .title,
+#principles .title-sub,
+#principles p,
+#positioning .title,
+#positioning .title-sub,
+#positioning p,
+#positioning .info p {
+	color: #fff !important;
+}
+#mission.bg-dark,
+#mission .pd-mini.bg-glass-dark-03 {
+	background: rgba(0, 0, 0, 0.9) !important;
+	border: 1px solid rgba(250, 213, 107, 0.15);
+}
+#mission .op-08 {
+	opacity: 0.95;
+	color: #fff;
+}
+
+/* Service cards: dark card, white text, accent icon */
+.arrowtip-service-card {
+	transition: box-shadow 0.25s ease, transform 0.25s ease;
+	border-radius: 4px;
+	background: rgba(0, 0, 0, 0.9) !important;
+	color: #fff !important;
+	border: 1px solid rgba(250, 213, 107, 0.2) !important;
+}
+.arrowtip-service-card:hover {
+	box-shadow: 0 8px 24px rgba(250, 213, 107, 0.15);
+	transform: translateY(-2px);
+	border-color: rgba(250, 213, 107, 0.4) !important;
+}
+.arrowtip-service-card h3,
+.arrowtip-service-card p {
+	color: #fff !important;
+}
+.arrowtip-card-icon {
+	border-radius: 4px;
+	color: #fad56b !important;
+}
+
+/* Principles: white cards with dark bg section */
+#principles .info-obj.bg-white,
+#principles .bg-white.shadow-tiny {
+	background: rgba(0, 0, 0, 0.9) !important;
+	border: 1px solid rgba(250, 213, 107, 0.2) !important;
+	color: #fff !important;
+}
+#principles .info-obj p {
+	color: #fff !important;
+}
+
+/* Positioning section */
+#positioning .info.bg-gray,
+#positioning .bg-gray.pd-mini {
+	background: rgba(0, 0, 0, 0.85) !important;
+	border: 1px solid rgba(250, 213, 107, 0.2);
+	color: #fff !important;
+}
+#positioning .op-08 {
+	color: rgba(255,255,255,0.9) !important;
+}
+
+/* Footer */
+footer.bg-dark,
+footer {
+	background: #000000 !important;
+	color: #fff !important;
+}
+footer a {
+	color: #fff !important;
+}
+footer a:hover {
+	color: #fad56b !important;
+}
+footer .typo-light,
+footer .typo-light a {
+	color: rgba(255,255,255,0.9) !important;
+}
+
+/* CONTACT US – uppercase, accent button */
+.arrowtip-cta {
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	font-weight: 600;
+}
+
+/* Section headings */
+#services .title.bold-1,
+#mission .title.bold-1,
+#principles .title.bold-1,
+#positioning .title.bold-1 {
+	letter-spacing: 0.02em;
+	color: #fff !important;
+}
+
+/* Dividers and borders – subtle accent */
+#about hr,
+#services hr,
+#principles hr,
+#positioning hr,
+.bdr-op-3 {
+	border-color: rgba(250, 213, 107, 0.25) !important;
+}
+#page section .title-sub {
+	color: rgba(255,255,255,0.9) !important;
+}
+
+/*===========================================*/
+/*	DESKTOP LAYOUT 
+/*===========================================*/
+
+
+/*@media (min-width: 1200px) {
+	
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+@media (min-width: 992px) {
+		
+}*/
+
+/*===========================================*/
+/*	MOBILE & TABLET COMMON
+/*===========================================*/
+/*@media (min-width: 200px) and (max-width: 991px) {
+	
+}*/
+
+
+/*===========================================*/
+/*	TABLET
+/*===========================================*/
+/*@media (min-width: 768px) and (max-width: 991px) {
+
+}*/
+
+
+/*===========================================*/
+/*	MOBILE
+/*===========================================*/
+/*@media (min-width: 200px) and (max-width: 767px) {
+	
+}
+@media (min-width: 600px) and (max-width: 767px) {
+}
+@media (min-width: 480px) and (max-width: 599px) {
+
+}
+@media (min-width: 200px) and (max-width: 479px) {
+
+}*/
