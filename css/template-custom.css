@@ -166,11 +166,17 @@ body > .page-loader {
 	width: 48px;
 	height: 48px;
 	background: rgba(250, 213, 107, 0.2);
+	background-image: none;
+	border: 2px solid rgba(250, 213, 107, 0.4);
 	border-radius: 50%;
-	transition: background 0.2s;
+	transition: background 0.2s, border-color 0.2s;
 	color: #fff;
 	z-index: 20;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -24px;
 }
 .hero-carousel-section .hero-pagination {
 	z-index: 20;
@@ -185,7 +191,9 @@ body > .page-loader {
 }
 .hero-carousel-section .swiper-button-prev i,
 .hero-carousel-section .swiper-button-next i {
-	font-size: 24px;
+	font-size: 22px;
+	line-height: 1;
+	display: block;
 }
 
 /* Sections: alternating slightly darker/lighter background */
