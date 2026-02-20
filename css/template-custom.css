@@ -374,9 +374,41 @@ footer .typo-light a {
 /*===========================================*/
 /*	MOBILE & TABLET COMMON
 /*===========================================*/
-/*@media (min-width: 200px) and (max-width: 991px) {
-	
-}*/
+@media (min-width: 200px) and (max-width: 991px) {
+	/* Hero slider arrows – same styling on mobile/tablet */
+	.hero-carousel-section .swiper-button-prev,
+	.hero-carousel-section .swiper-button-next {
+		position: absolute !important;
+		width: 48px !important;
+		height: 48px !important;
+		background: rgba(250, 213, 107, 0.2) !important;
+		background-image: none !important;
+		background-size: auto !important;
+		border: 2px solid rgba(250, 213, 107, 0.4);
+		border-radius: 50%;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		top: 50% !important;
+		margin-top: -24px !important;
+		left: 10px !important;
+		right: auto !important;
+	}
+	.hero-carousel-section .swiper-button-next {
+		left: auto !important;
+		right: 10px !important;
+	}
+	.hero-carousel-section .swiper-button-prev:after,
+	.hero-carousel-section .swiper-button-next:after {
+		content: none !important;
+	}
+	.hero-carousel-section .swiper-button-prev i,
+	.hero-carousel-section .swiper-button-next i {
+		font-size: 22px !important;
+		line-height: 1 !important;
+		display: block !important;
+	}
+}
 
 
 /*===========================================*/
